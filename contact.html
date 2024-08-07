@@ -190,8 +190,8 @@
 							<h2 class="section-title">Obtenez un Devis Gratuit</h2>
 							<p class="mb-40">Si vous avez des questions sur le coût du projet, contactez-nous.</p>
 							<!-- Contact Form -->
-							<form id="contact-form" class="contact-form material" method="post" action="#">
-
+							<form id="contact-form" class="contact-form material" method="post" action="https://api.web3forms.com/submit" method="POST">
+								<input type="hidden" name="access_key" value="daec3fcb-d739-4e59-981e-f6f188660d9c">
 								<div class="row">
 									<div class="col-lg-6">
 										<!-- Name -->
@@ -214,29 +214,30 @@
 										</div>
 									</div>
 								</div>
-
+						
 								<!-- Subject -->
 								<div class="material__form-group form-group">
 									<input type="text" name="subject" id="subject" class="form-input material__input">
 									<label for="subject" class="material__label">Objet
 									</label>
 									<span class="material__underline"></span>
-								</div>							
-
+								</div>                            
+						
 								<div class="material__form-group form-group">
 									<textarea id="message" name="message" rows="7" class="form-input material__input" required=""></textarea>
 									<label for="message" class="material__label">Message
 										<abbr title="required" class="required">*</abbr>
 									</label>
 									<span class="material__underline"></span>
-								</div>								
-
+								</div>                                
+						
 								<input type="submit" class="btn btn--lg btn--color btn--button" value="Envoyer" id="submit-message">
 								<div id="msg" class="message"></div>
 							</form>
+							<div id="confirmation-message" style="display: none;">
+								<p>Merci! Votre message a été envoyé avec succès.</p>
+							</div>
 						</div>
-          </div>
-        </div>
       </section> <!-- end contact -->
 
 
@@ -312,6 +313,8 @@
 	</main> <!-- end main wrapper -->
 
 
+
+	
 	<!-- jQuery Scripts -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
