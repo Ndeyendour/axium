@@ -22,6 +22,53 @@
 	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+	<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+	<style>
+		.project__img-holder {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project__img {
+      transition: transform 0.5s ease, filter 0.5s ease;
+      width: 100%;
+      height: auto;
+    }
+
+    .project__img-holder:hover .project__img {
+      transform: scale(1.1);
+      filter: brightness(80%);
+    }
+
+    .hover-overlay {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      transition: opacity 0.5s ease;
+    }
+
+    .project__img-holder:hover .hover-overlay {
+      opacity: 1;
+    }
+
+    .masonry-filter a {
+      transition: color 0.3s ease, background-color 0.3s ease;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    .masonry-filter a:hover {
+      color: #fff;
+      background-color: #333;
+      border-radius: 5px;
+    }
+
+	</style>
 
 </head>
 
@@ -89,14 +136,7 @@
 										<li><a href="portfolio-single.html">Portfolio Single</a></li>
 									</ul> -->
 								</li>
-								<li class="nav__dropdown">
-									<a href="portfolio-gallery.html" aria-haspopup="true">Portefolio</a>
-									<i class="ui-arrow-down nav__dropdown-trigger" role="button" aria-haspopup="true" aria-expanded="false"></i>
-									<!-- <ul class="nav__dropdown-menu">
-										<li><a href="icons.html">Icons</a></li>
-										<li><a href="elements.html">Elements</a></li>
-									</ul> -->
-								</li>
+								
 								<li class="nav__dropdown">
 									<a href="contact.html" aria-haspopup="true">Contact</a>
 									<i class="ui-arrow-down nav__dropdown-trigger" role="button" aria-haspopup="true" aria-expanded="false"></i>
@@ -173,113 +213,113 @@
 
 			<!-- Services -->
 			
-<section class="section-wrap pt-0 pb-0">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-4 col-lg-6">
-                <div class="service-1">
-                    <a href="#" class="service-1__url hover-scale">
-                        <img src="img/services/v-2/1.jpg" class="service-1__img" alt="">
-                    </a>
-                    <div class="service-1__info">
-                        <h3 class="service-1__title">Construction</h3>
-                        <p>Nous offrons des services complets dans le domaine de la construction, y compris la gestion des projets, la construction d'ouvrages d'art, et plus encore.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6">
-                <div class="service-1">
-                    <a href="#" class="service-1__url hover-scale">
-                        <img src="img/services/v-2/2.jpg" class="service-1__img" alt="">
-                    </a>
-                    <div class="service-1__info">
-                        <h3 class="service-1__title">Assainissement</h3>
-                        <p>Nous proposons des solutions efficaces pour l'assainissement, garantissant un environnement sain et sûr.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6">
-                <div class="service-1">
-                    <a href="#" class="service-1__url hover-scale">
-                        <img src="img/services/v-2/3.jpg" class="service-1__img" alt="">
-                    </a>
-                    <div class="service-1__info">
-                        <h3 class="service-1__title">Terrassement</h3>
-                        <p>Nous réalisons tous les travaux de terrassement nécessaires pour préparer les terrains de manière professionnelle.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6">
-                <div class="service-1">
-                    <a href="#" class="service-1__url hover-scale">
-                        <img src="img/services/v-2/4.jpg" class="service-1__img" alt="">
-                    </a>
-                    <div class="service-1__info">
-                        <h3 class="service-1__title">Finition</h3>
-                        <p>Nous offrons des services de finition de haute qualité, incluant le carrelage, l'électricité, et la peinture.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6">
-                <div class="service-1">
-                    <a href="#" class="service-1__url hover-scale">
-                        <img src="img/services/v-2/5.jpg" class="service-1__img" alt="">
-                    </a>
-                    <div class="service-1__info">
-                        <h3 class="service-1__title">Construction de Villas</h3>
-                        <p>Nous vous accompagnons dans la conception et la construction de villas sur mesure, alliant confort et élégance.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6">
-                <div class="service-1">
-                    <a href="#" class="service-1__url hover-scale">
-                        <img src="img/services/v-2/6.jpg" class="service-1__img" alt="">
-                    </a>
-                    <div class="service-1__info">
-                        <h3 class="service-1__title">Prestations Diverses</h3>
-                        <p>Nous offrons une gamme complète de prestations, incluant la fourniture de matériaux divers pour répondre à vos besoins spécifiques.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> <!-- end services -->
+			<section class="section-wrap pt-0 pb-0">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-4 col-lg-6">
+							<div class="service-1">
+								<a href="#" class="service-1__url hover-scale">
+									<img src="img/services/v-2/1.jpg" class="service-1__img" alt="">
+								</a>
+								<div class="service-1__info">
+									<h3 class="service-1__title">Construction</h3>
+									<p>Nous offrons des services complets dans le domaine de la construction, y compris la gestion des projets, la construction d'ouvrages d'art, et plus encore.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-lg-6">
+							<div class="service-1">
+								<a href="#" class="service-1__url hover-scale">
+									<img src="img/services/v-2/2.jpg" class="service-1__img" alt="">
+								</a>
+								<div class="service-1__info">
+									<h3 class="service-1__title">Assainissement</h3>
+									<p>Nous proposons des solutions efficaces pour l'assainissement, garantissant un environnement sain et sûr.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-lg-6">
+							<div class="service-1">
+								<a href="#" class="service-1__url hover-scale">
+									<img src="img/services/v-2/3.jpg" class="service-1__img" alt="">
+								</a>
+								<div class="service-1__info">
+									<h3 class="service-1__title">Terrassement</h3>
+									<p>Nous réalisons tous les travaux de terrassement nécessaires pour préparer les terrains de manière professionnelle.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-lg-6">
+							<div class="service-1">
+								<a href="#" class="service-1__url hover-scale">
+									<img src="img/services/v-2/4.jpg" class="service-1__img" alt="">
+								</a>
+								<div class="service-1__info">
+									<h3 class="service-1__title">Finition</h3>
+									<p>Nous offrons des services de finition de haute qualité, incluant le carrelage, l'électricité, et la peinture.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-lg-6">
+							<div class="service-1">
+								<a href="#" class="service-1__url hover-scale">
+									<img src="img/services/v-2/5.jpg" class="service-1__img" alt="">
+								</a>
+								<div class="service-1__info">
+									<h3 class="service-1__title">Construction de Villas</h3>
+									<p>Nous vous accompagnons dans la conception et la construction de villas sur mesure, alliant confort et élégance.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-lg-6">
+							<div class="service-1">
+								<a href="#" class="service-1__url hover-scale">
+									<img src="img/services/v-2/6.jpg" class="service-1__img" alt="">
+								</a>
+								<div class="service-1__info">
+									<h3 class="service-1__title">Prestations Diverses</h3>
+									<p>Nous offrons une gamme complète de prestations, incluant la fourniture de matériaux divers pour répondre à vos besoins spécifiques.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> <!-- end services -->
 
-<section class="section-wrap bg-dark-overlay" style="background-image: url(img/page-title/about.jpg);">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="process">
-                    <i class="icon-Ruler-Tool process__icon"></i>
-                    <h4 class="process__title">1. Planification</h4>
-                    <p class="process__text">Nous établissons une stratégie claire pour chaque projet, en tenant compte des besoins spécifiques de nos clients.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="process">
-                    <i class="icon-Book-Write process__icon"></i>
-                    <h4 class="process__title">2. Conception</h4>
-                    <p class="process__text">Nous concevons des solutions sur mesure en prenant en compte tous les aspects techniques et esthétiques du projet.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="process">
-                    <i class="icon-Truck-1 process__icon"></i>
-                    <h4 class="process__title">3. Construction</h4>
-                    <p class="process__text">Nous supervisons chaque étape de la construction pour garantir la qualité et le respect des délais.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="process">
-                    <i class="icon-House-Key-3 process__icon"></i>
-                    <h4 class="process__title">4. Livraison</h4>
-                    <p class="process__text">Nous assurons une livraison clé en main du projet, en veillant à la satisfaction totale du client.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> <!-- end process -->
+			<section class="section-wrap bg-dark-overlay" style="background-image: url(img/page-title/about.jpg);">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6">
+							<div class="process">
+								<i class="icon-Ruler-Tool process__icon"></i>
+								<h4 class="process__title">1. Planification</h4>
+								<p class="process__text">Nous établissons une stratégie claire pour chaque projet, en tenant compte des besoins spécifiques de nos clients.</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="process">
+								<i class="icon-Book-Write process__icon"></i>
+								<h4 class="process__title">2. Conception</h4>
+								<p class="process__text">Nous concevons des solutions sur mesure en prenant en compte tous les aspects techniques et esthétiques du projet.</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="process">
+								<i class="icon-Truck-1 process__icon"></i>
+								<h4 class="process__title">3. Construction</h4>
+								<p class="process__text">Nous supervisons chaque étape de la construction pour garantir la qualité et le respect des délais.</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="process">
+								<i class="icon-House-Key-3 process__icon"></i>
+								<h4 class="process__title">4. Livraison</h4>
+								<p class="process__text">Nous assurons une livraison clé en main du projet, en veillant à la satisfaction totale du client.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> <!-- end process -->
 
 			<!-- CTA -->
 			<div class="call-to-action text-center">
@@ -292,7 +332,128 @@
 					</a>
 				</div>
 			</div>
-
+			
+			<section class="section-wrap">
+				<div class="container-fluid container-semi-fluid">
+			  
+				  <!-- Filter -->
+				  <div class="masonry-filter text-center">
+					<a href="#" class="filter active" data-filter="*">Tous</a>
+					<a href="#" class="filter" data-filter=".residential">Residence</a>
+					<a href="#" class="filter" data-filter=".commercial">Commercial</a>
+					<a href="#" class="filter" data-filter=".interior">Education</a>
+					<a href="#" class="filter" data-filter=".landscape">Bureau</a>
+				  </div> <!-- end filter -->
+			  
+				  <div class="row masonry-grid">
+					<div class="masonry-item col-lg-3 project hover-trigger residential" data-aos="fade-up" data-aos-duration="1000">
+					  <div class="project__container">
+						<div class="project__img-holder">
+						  <a href="portfolio-single.html">
+							<img src="img/portfolio/1.jpg" alt="Keangnam Grand Hall" class="project__img">
+							<div class="hover-overlay">
+							  <div class="project__description">
+								<h3 class="project__title">Keangnam Grand Hall</h3>
+								<span class="project__date">2018</span>
+							  </div>
+							</div>
+						  </a>              
+						</div>                  
+					  </div> 
+					</div> <!-- end project -->
+			  
+					<div class="masonry-item col-lg-3 project hover-trigger commercial" data-aos="fade-up" data-aos-duration="1200">
+					  <div class="project__container">
+						<div class="project__img-holder">
+						  <a href="portfolio-single.html">
+							<img src="img/portfolio/2.jpg" alt="Green House" class="project__img">
+							<div class="hover-overlay">
+							  <div class="project__description">
+								<h3 class="project__title">Green House</h3>
+								<span class="project__date">2018</span>
+							  </div>
+							</div>
+						  </a>              
+						</div>                  
+					  </div> 
+					</div> <!-- end project -->
+			  
+					<div class="masonry-item col-lg-3 project hover-trigger interior" data-aos="fade-up" data-aos-duration="1400">
+					  <div class="project__container">
+						<div class="project__img-holder">
+						  <a href="portfolio-single.html">
+							<img src="img/portfolio/3.jpg" alt="Contemporary Villa" class="project__img">
+							<div class="hover-overlay">
+							  <div class="project__description">
+								<h3 class="project__title">Contemporary Villa</h3>
+								<span class="project__date">2018</span>
+							  </div>
+							</div>
+						  </a>              
+						</div>                  
+					  </div> 
+					</div> <!-- end project -->
+			  
+					<div class="masonry-item col-lg-3 project hover-trigger landscape" data-aos="fade-up" data-aos-duration="1600">
+					  <div class="project__container">
+						<div class="project__img-holder">
+						  <a href="portfolio-single.html">
+							<img src="img/portfolio/4.jpg" alt="Keangnam Grand Hall" class="project__img">
+							<div class="hover-overlay">
+							  <div class="project__description">
+								<h3 class="project__title">Keangnam Grand Hall</h3>
+								<span class="project__date">2018</span>
+							  </div>
+							</div>
+						  </a>              
+						</div>                  
+					  </div> 
+					</div> <!-- end project -->
+			  
+					<div class="masonry-item col-lg-3 project hover-trigger residential" data-aos="fade-up" data-aos-duration="1800">
+					  <div class="project__container">
+						<div class="project__img-holder">
+						  <a href="portfolio-single.html">
+							<img src="img/portfolio/5.jpg" alt="Business Office" class="project__img">
+							<div class="hover-overlay">
+							  <div class="project__description">
+								<h3 class="project__title">Business Office</h3>
+								<span class="project__date">2018</span>
+							  </div>
+							</div>
+						  </a>              
+						</div>                  
+					  </div> 
+					</div> <!-- end project -->
+			  
+					<div class="masonry-item col-lg-3 project hover-trigger commercial" data-aos="fade-up" data-aos-duration="2000">
+					  <div class="project__container">
+						<div class="project__img-holder">
+						  <a href="portfolio-single.html">
+							<img src="img/portfolio/6.jpg" alt="Horizon Urban" class="project__img">
+							<div class="hover-overlay">
+							  <div class="project__description">
+								<h3 class="project__title">Horizon Urban</h3>
+								<span class="project__date">2018</span>
+							  </div>
+							</div>
+						  </a>              
+						</div>                  
+					  </div> 
+					</div> <!-- end project -->
+			  
+					<!-- Add more project items similarly -->
+			  
+				  </div>
+				</div>
+			  </section> <!-- end portfolio -->
+			  
+			  
+			
+			  
+			
+			
+			
 
 			<!-- Footer -->
 			<footer class="footer bg-dark-overlay" style="background-image: url(img/footer/1.jpg);">
@@ -360,13 +521,17 @@
 
 		</div> <!-- end content wrapper -->
 	</main> <!-- end main wrapper -->
-
-
+	<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+	<script>
+	AOS.init();
+	</script>
+		
 	<!-- jQuery Scripts -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/scripts.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </body>
 </html>
